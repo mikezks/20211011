@@ -11,7 +11,11 @@ export const FLIGHT_BOOKING_ROUTES: Routes = [
     children: [
       {
         path: 'flight-search',
-        component: FlightSearchComponent
+        component: FlightSearchComponent,
+        data: {
+          label: 'Flight Search',
+          icon: 'Flight'
+        }
       },
       {
         path: 'passenger-search',

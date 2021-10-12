@@ -5,6 +5,7 @@
 >
   <div class="header">
     <h2 class="title">{{ item.from }} - {{ item.to }}</h2>
+    <ng-content select=".sub-title"></ng-content>
   </div>
   <div class="content">
     <p>Flight-No.: #{{ item.id }}</p>
@@ -27,3 +28,5 @@
     </p>
   </div>
 </div>
+
+{{ blink() }}
