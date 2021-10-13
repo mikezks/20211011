@@ -2,6 +2,7 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import {Component, OnInit} from '@angular/core';
 import {FlightService} from '@flight-workspace/flight-lib';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'flight-search',
@@ -13,6 +14,14 @@ export class FlightSearchComponent implements OnInit {
   from = 'Hamburg'; // in Germany
   to = 'Graz'; // in Austria
   urgent = false;
+  flights$ = of([{
+    id: 999,
+    from: 'London',
+    to: 'New York',
+    delayed: false,
+    date: new Date()
+  }]);
+  counter$ = of(0, 5, 10);
 
   get flights() {
     return this.flightService.flights;
