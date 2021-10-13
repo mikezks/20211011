@@ -6,13 +6,25 @@
     <navbar-cmp></navbar-cmp>
     <div class="content">
 
+      <div class="card">
+        <div class="header">
+          <h2 class="title">Change Detection</h2>
+        </div>
+        <div class="content">
+          <p>
+            App Component Change Detection Counter:
+            <span #counter class="badge badge-pill badge-info"></span>
+          </p>
+        </div>
+      </div>
+
       <router-outlet></router-outlet>
 
       <router-outlet name="aux"></router-outlet>
 
     </div>
 
-
   </div>
 </div>
 
+{{ cdCountUpdater() }}
