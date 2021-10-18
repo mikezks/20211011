@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 250px;
+  min-height: 30px;
+  padding: 5px;
+  margin: 8px;
+}
+
+.icon-empty:host {
+  background-color: lightskyblue;
+}
+
+.icon-text:host {
+  background-color: lightseagreen;
+}
+
+.icon-content:host {
+  background-color: lightsalmon;
+}

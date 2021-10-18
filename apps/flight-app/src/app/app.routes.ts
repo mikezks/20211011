@@ -13,6 +13,11 @@ export const APP_ROUTES: Routes = [
     component: HomeComponent
   },
   {
+    path: 'icon-demo',
+    loadChildren: () => import('./icon-demo/icon-demo.module')
+      .then(esm => esm.IconDemoModule)
+  },
+  {
     path: 'mf-passenger',
     loadChildren: () => import('passenger/module')
       .then(esm => esm.PassengerModule)
