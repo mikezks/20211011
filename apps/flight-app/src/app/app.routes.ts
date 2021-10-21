@@ -18,6 +18,11 @@ export const APP_ROUTES: Routes = [
       .then(esm => esm.IconDemoModule)
   },
   {
+    path: 'flight-booking',
+    loadChildren: () => import('./flight-booking/flight-booking.module')
+      .then(esm => esm.FlightBookingModule)
+  },
+  {
     path: 'mf-passenger',
     loadChildren: () => import('passenger/module')
       .then(esm => esm.PassengerModule)
